@@ -1,0 +1,149 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "更新日志";
+}
+
+<style>
+
+    ul, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .timeline {
+        padding-left: 10%;
+        padding-top: 20px;
+    }
+
+    .timeline-item {
+        position: relative;
+        padding-bottom: 20px;
+        margin-top: -20px;
+    }
+
+        .timeline-item:first-child::before {
+            display: block;
+        }
+
+        .timeline-item:last-child::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 0;
+            z-index: 0;
+            width: 0;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            z-index: 0;
+            width: 1px;
+            height: 100%;
+        }
+
+
+        .timeline-item::before, hr {
+            background-color: #569fff;
+        }
+
+    .timeline-axis {
+        position: absolute;
+        left: -5px;
+        top: 0;
+        z-index: 0;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        background-color: #fff;
+        color: #5FB878;
+        border-radius: 50%;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .timeline-item-content {
+        padding-left: 25px;
+    }
+
+    .text {
+        line-height: 22px;
+        font-size: 14px;
+        color: #666;
+        top: -10px;
+    }
+
+    .timeline-item-title {
+        position: relative;
+        margin-bottom: 10px;
+    }
+
+    .circle {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 1px solid #569fff;
+    }
+
+    .etime-first {
+        top: 45%;
+        left: -100px;
+        position: absolute;
+    }
+
+    .time-first {
+        position: absolute;
+        left: -60px;
+    }
+
+    .icon {
+        margin-left: -2px !important;
+    }
+
+    p:last-child {
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="container">
+    <ul class="timeline">
+        <li class="timeline-item">
+            <!-- 日期     |     更新内容 -->
+            <div class="relative">
+                <span class="time-first"> V1.0 </span>
+            </div>
+
+            <i class="icon favorite timeline-axis archive"></i>
+
+            <div class="timeline-item-content text">
+                <h5 class="timeline-title">@DateTime.Now</h5>
+                <p>
+                    测试内容
+                    <br />
+                    测试内容
+                    <br />
+                    测试内容
+                    <br />
+                    测试内容
+                    <br />
+                    测试内容
+                    <br />
+                </p>
+            </div>
+        </li>
+
+        <li class="timeline-item">
+            <i class="icon favorite timeline-axis archive"></i>
+            <div class="timeline-item-content text">
+                <h5 class="timeline-title">@DateTime.Now</h5>
+            </div>
+        </li>
+    </ul>
+</div>

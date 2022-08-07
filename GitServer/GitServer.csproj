@@ -19,6 +19,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\js\highlight\highlight.pack.js" />
+    <None Include="wwwroot\plugins\Editor\wangEditor.js" />
+    <None Include="wwwroot\plugins\Editor\wangEditor.min.js" />
+    <None Include="wwwroot\plugins\Editor\wangEditor.min.js.map" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GitServer.Infrastructure\GitServer.Infrastructure.csproj" />

@@ -1,0 +1,107 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+
+<style>
+
+    .setting-left {
+        float: left;
+        width: 20%;
+        border-right: 1px solid #ccc;
+    }
+
+    .setting-right {
+        float: left;
+        padding: 20px;
+    }
+
+        .setting-right > div {
+            padding: 3px;
+        }
+
+        .setting-right h4 {
+            border-bottom: 1px solid #d0d7de;
+        }
+
+    ul {
+        padding: 20px 10px;
+    }
+
+    li {
+        list-style: none;
+        padding: 5px;
+    }
+
+        li:hover {
+            background-color: #f2f2f2;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        li a {
+            padding: 0 10px;
+            border: 1px solid transparent;
+        }
+
+
+    .item {
+        border-top: 1px solid #ccc;
+    }
+
+</style>
+
+<div class="container">
+    <div class="setting">
+        <div class="setting-left">
+            <ul>
+                <li>
+                    <a href="#account">账号信息</a>
+                </li>
+                <li>
+                    <a href="#notity">通知</a>
+                </li>
+                <li>
+                    <a href="#setting">设置</a>
+                </li>
+                <li>
+                    <a href="#other">其他</a>
+                </li>
+            </ul>
+        </div>
+        <div class="setting-right">
+
+            <div id="account">
+                <h4>账号信息</h4>
+                <p class="line"></p>
+            </div>
+
+            <div id="notity">
+                <h4>通知</h4>
+                <p class="line"></p>
+                <div id="edit">
+                </div>
+            </div>
+
+            <div id="setting">
+                <h4>设置</h4>
+                @for (int i = 1; i < 20; i++)
+                {
+                    <p> 第 @i 行</p> 
+                }
+            </div>
+
+            <div id="other">
+                <h4>其他</h4>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/plugins/Editor/wangEditor.js"></script>
+<script type="text/javascript">
+    var editCom = window.wangEditor;
+    var edit = new editCom("#edit");
+    edit.create();
+</script>

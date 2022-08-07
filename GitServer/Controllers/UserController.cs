@@ -73,5 +73,10 @@ namespace GitServer.Controllers
             return Redirect("/");
         }
 
+      
+        public IActionResult UserInfo()
+        {
+            return View();
+        }
     }
 }

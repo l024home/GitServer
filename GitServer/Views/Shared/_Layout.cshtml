@@ -22,12 +22,16 @@
                                 <img src="/img/logo_white.svg" alt="GitServer" class="logo-image" />
                             </a>
                             <a class="item" href="/">首页</a>
-                            <a class="item" href="#">探索</a>
-                            <div class="right menu">
+                            <a class="item" href="/SysUpdateLog/Index">更新日志</a>
+                            <div class="right menu dropdown">
                                 @if (ViewContext.HttpContext.User.Identity.IsAuthenticated)
                                 {
-                                    <a class="item" href="#">@ViewContext.HttpContext.User.Identity.Name</a>
-                                    <a class="item" href="/User/Signout">注销</a>
+                                    <a class="item">@ViewContext.HttpContext.User.Identity.Name</a>
+
+                                    <div class="dropdown-content">
+                                        <a class="item" href="/User/UserInfo">设置</a>
+                                        <a class="item" href="/User/Signout">注销</a>
+                                    </div>
                                 }
                                 else
                                 {
@@ -41,7 +45,7 @@
         </div>
         <div class="ui container dashboard">
             @RenderBody()
-        </div>        
+        </div>
     </div>
     <footer>
         <div class="ui container">
